@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020604;
+  --foreground: #f3eed8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(215, 255, 69, 0.09), transparent 30rem),
+    radial-gradient(circle at 78% 12%, rgba(202, 158, 56, 0.08), transparent 24rem),
+    linear-gradient(180deg, #020604 0%, #030806 46%, #020604 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+a,
+input,
+textarea {
+  outline-color: #7cff6b;
+}
+
+::selection {
+  background: #7cff6b;
+  color: #020604;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex h-14 items-center justify-center gap-3 rounded-md border border-[#efff69] bg-[#d7ff45] px-7 text-sm font-black uppercase tracking-wide text-[#020604] shadow-[0_0_28px_rgba(215,255,69,0.58),0_10px_34px_rgba(0,0,0,0.45),inset_0_0_18px_rgba(255,255,255,0.26)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#efff78] hover:shadow-[0_0_46px_rgba(215,255,69,0.84),0_16px_42px_rgba(0,0,0,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45];
+  }
+
+  .btn-secondary {
+    @apply inline-flex h-14 items-center justify-center gap-3 rounded-md border border-[#9d8235] bg-[#06110d]/82 px-7 text-sm font-black uppercase tracking-wide text-[#f3eed8] shadow-[0_12px_34px_rgba(0,0,0,0.35),inset_0_0_24px_rgba(215,255,69,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-[#d7ff45] hover:text-[#d7ff45] hover:shadow-[0_0_30px_rgba(215,255,69,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45];
+  }
+
+  .btn-link {
+    @apply inline-flex h-17 items-center justify-center gap-3 rounded-md border border-[#596f58] bg-[#07130e]/88 px-5 text-sm font-black uppercase tracking-wide text-[#f3eed8] shadow-[0_12px_34px_rgba(0,0,0,0.34),inset_0_0_22px_rgba(124,255,107,0.045)] transition duration-200 hover:-translate-y-0.5 hover:border-[#d7ff45] hover:text-[#d7ff45] hover:shadow-[0_0_30px_rgba(215,255,69,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45];
+  }
+
+  .card-surface {
+    @apply overflow-hidden rounded-lg border border-[#70622d] bg-[#07110c]/92 shadow-[0_24px_80px_rgba(0,0,0,0.46),inset_0_0_30px_rgba(124,255,107,0.05)] transition duration-200 hover:-translate-y-1 hover:border-[#d7ff45]/70 hover:shadow-[0_28px_90px_rgba(0,0,0,0.55),0_0_34px_rgba(215,255,69,0.14)];
+  }
+
+  .grimmi-panel {
+    @apply rounded-lg border border-[#344c37] bg-[#06110d]/84 shadow-[0_28px_100px_rgba(0,0,0,0.48),inset_0_0_38px_rgba(124,255,107,0.05)] backdrop-blur-sm;
+  }
+
+  .section-heading {
+    @apply text-center text-3xl font-black uppercase tracking-[0.14em] text-[#c9e66a] drop-shadow-[0_0_16px_rgba(215,255,69,0.25)] sm:text-4xl;
+  }
+
+  .goblin-title {
+    @apply font-serif text-[#b6da49] drop-shadow-[0_0_18px_rgba(215,255,69,0.24)];
+  }
+
+  .ornate-frame {
+    position: relative;
+  }
+
+  .ornate-frame::before,
+  .ornate-frame::after {
+    content: "";
+    position: absolute;
+    height: 1.15rem;
+    width: 1.15rem;
+    border-color: rgba(215, 255, 69, 0.54);
+    pointer-events: none;
+  }
+
+  .ornate-frame::before {
+    left: 0.65rem;
+    top: 0.65rem;
+    border-left-width: 1px;
+    border-top-width: 1px;
+  }
+
+  .ornate-frame::after {
+    bottom: 0.65rem;
+    right: 0.65rem;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+  }
+
+  .ornate-divider {
+    @apply mx-auto flex w-full max-w-3xl items-center gap-4 text-center;
+  }
+
+  .ornate-divider::before,
+  .ornate-divider::after {
+    content: "";
+    @apply h-px flex-1;
+    background: linear-gradient(90deg, transparent, rgba(138, 116, 49, 0.75), rgba(215, 255, 69, 0.55));
+  }
+
+  .ornate-divider::after {
+    background: linear-gradient(90deg, rgba(215, 255, 69, 0.55), rgba(138, 116, 49, 0.75), transparent);
+  }
 }
