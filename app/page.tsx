@@ -4,6 +4,7 @@ import { CommunitySection } from "./_components/landing/CommunitySection";
 import { Footer } from "./_components/landing/Footer";
 import { Header } from "./_components/landing/Header";
 import { HeroSection } from "./_components/landing/HeroSection";
+import { MemeKitSection } from "./_components/landing/MemeKitSection";
 import { RoadmapSection } from "./_components/landing/RoadmapSection";
 import { StorySection } from "./_components/landing/StorySection";
 import { TokenDisclaimer } from "./_components/landing/TokenDisclaimer";
@@ -22,6 +23,7 @@ export default function Home() {
         <VaultSection />
         <RoadmapSection />
         <CommunitySection />
+        <MemeKitSection />
         <TokenDisclaimer />
         <Footer />
       </div>

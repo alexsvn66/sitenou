@@ -80,6 +80,7 @@ function RoadmapScene({
         backgroundImage: `url("${roadmapReference}")`,
         backgroundPosition: `${xPosition}% ${yPosition}%`,
         backgroundSize: `${backgroundWidth}% auto`,
+        filter: "contrast(1.08) saturate(1.12) brightness(1.08)",
       }}
     />
   );
@@ -194,7 +195,7 @@ export function RoadmapSection() {
 
             <div className="relative aspect-[192/106] overflow-hidden rounded-t-[0.9rem] border-b border-[#987b3d]/72 bg-[#020604] sm:aspect-auto sm:h-44 lg:aspect-[192/106] lg:h-auto">
               <RoadmapScene alt={card.imageAlt} crop={card.sceneCrop} />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,4,0.03),transparent_42%,rgba(2,6,4,0.8)),radial-gradient(circle_at_50%_40%,rgba(215,255,69,0.075),transparent_60%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_58%,rgba(2,6,4,0.16)_78%,rgba(2,6,4,0.58)_100%)]" />
               <div className="pointer-events-none absolute inset-x-4 bottom-3 h-px bg-gradient-to-r from-transparent via-[#d7ff45]/58 to-transparent shadow-[0_0_10px_rgba(215,255,69,0.44)]" />
             </div>
 

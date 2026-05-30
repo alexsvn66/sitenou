@@ -27,7 +27,7 @@ const communityLinks = [
     crop: { x: 900, y: 444, width: 62, height: 62 },
   },
   {
-    href: "#",
+    href: "#meme-kit",
     label: "Meme Kit",
     crop: { x: 1247, y: 444, width: 62, height: 62 },
   },
@@ -118,7 +118,7 @@ export function CommunitySection() {
           <a
             aria-label="Meme Kit"
             className={`${hotspotClass} left-[71%] top-[62.7%] h-[14.5%] w-[21.2%]`}
-            href="#"
+            href="#meme-kit"
           />
         </div>
       </div>
