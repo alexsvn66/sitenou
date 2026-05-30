@@ -94,7 +94,7 @@ export function MemeKitSection() {
         </div>
 
         <h2
-          className="mt-4 bg-gradient-to-b from-[#fff5b6] via-[#e6f678] to-[#bedb54] bg-clip-text font-serif text-[clamp(3rem,7vw,5.8rem)] font-black uppercase leading-[0.9] tracking-[0.07em] text-transparent"
+          className="mt-4 bg-gradient-to-b from-[#fff5b6] via-[#e6f678] to-[#bedb54] bg-clip-text font-serif text-[clamp(2.55rem,12vw,3rem)] font-black uppercase leading-[0.9] tracking-[0.07em] text-transparent sm:text-[clamp(3rem,7vw,5.8rem)]"
           style={{
             fontFamily: "Georgia, Garamond, 'Times New Roman', serif",
             textShadow:
@@ -121,10 +121,10 @@ export function MemeKitSection() {
         </div>
       </header>
 
-      <div className="relative mt-9 grid gap-4 sm:grid-cols-2 lg:mt-11 lg:grid-cols-4">
+      <div className="relative mt-9 grid gap-4 sm:grid-cols-2 lg:mt-11 xl:grid-cols-4">
         {memeKitCards.map((card) => (
           <article
-            className="group relative overflow-hidden rounded-[0.95rem] border border-[#786337]/92 bg-[#04100b] shadow-[0_22px_64px_rgba(0,0,0,0.62),0_0_25px_rgba(215,255,69,0.075),inset_0_0_34px_rgba(215,255,69,0.038)] transition duration-300 hover:-translate-y-1 hover:border-[#d7ff45]/72 hover:shadow-[0_30px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(215,255,69,0.15),inset_0_0_36px_rgba(215,255,69,0.055)]"
+            className="group relative min-w-0 overflow-hidden rounded-[0.95rem] border border-[#786337]/92 bg-[#04100b] shadow-[0_22px_64px_rgba(0,0,0,0.62),0_0_25px_rgba(215,255,69,0.075),inset_0_0_34px_rgba(215,255,69,0.038)] transition duration-300 hover:-translate-y-1 hover:border-[#d7ff45]/72 hover:shadow-[0_30px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(215,255,69,0.15),inset_0_0_36px_rgba(215,255,69,0.055)]"
             key={card.title}
           >
             <VaultCorners />

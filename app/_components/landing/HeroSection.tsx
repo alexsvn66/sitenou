@@ -180,7 +180,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_34%,rgba(215,255,69,0.18),transparent_30rem),linear-gradient(180deg,#020604_0%,#06120c_48%,#020604_100%)]" />
 
       <div className="relative mx-auto w-full max-w-[118rem]">
-        <div className="relative aspect-[941/520] min-h-[32rem] overflow-hidden bg-[#020604] md:min-h-0">
+        <div className="relative aspect-[941/520] min-h-[32rem] w-full max-w-full overflow-hidden bg-[#020604] md:min-h-0">
           <Image
             alt=""
             className="object-cover object-center"

@@ -68,11 +68,11 @@ export function Header() {
 
       <nav
         aria-label="Mobile navigation"
-        className="relative mx-auto flex max-w-[92rem] gap-2 overflow-x-auto px-5 pb-3 sm:px-7 lg:hidden"
+        className="relative mx-auto flex max-w-[92rem] gap-1 px-4 pb-3 sm:gap-2 sm:px-7 lg:hidden"
       >
         {navItems.map((item) => (
           <a
-            className="min-w-fit rounded-full border border-[#2b432e] bg-[#06110d]/82 px-3 py-2 text-center text-xs font-bold text-[#cdd7bd] shadow-[inset_0_0_12px_rgba(215,255,69,0.04)] transition hover:border-[#d7ff45]/60 hover:text-[#d7ff45]"
+            className="min-w-0 flex-1 rounded-full border border-[#2b432e] bg-[#06110d]/82 px-1.5 py-2 text-center text-[0.66rem] font-bold text-[#cdd7bd] shadow-[inset_0_0_12px_rgba(215,255,69,0.04)] transition hover:border-[#d7ff45]/60 hover:text-[#d7ff45] sm:min-w-fit sm:flex-none sm:px-3 sm:text-xs"
             href={item.href}
             key={item.href}
           >

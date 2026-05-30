@@ -58,10 +58,10 @@ export function VaultSection() {
         </div>
       </div>
 
-      <div className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="relative grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {vaultCards.map((card) => (
           <article
-            className="group relative flex min-h-[21.75rem] flex-col overflow-hidden rounded-[0.9rem] border border-[#766731]/90 bg-[#050d09] shadow-[0_24px_78px_rgba(0,0,0,0.58),0_0_28px_rgba(215,255,69,0.08),inset_0_0_34px_rgba(124,255,107,0.055)] transition duration-300 hover:-translate-y-1.5 hover:border-[#d7ff45]/76 hover:shadow-[0_34px_96px_rgba(0,0,0,0.68),0_0_54px_rgba(215,255,69,0.18),inset_0_0_42px_rgba(215,255,69,0.075)]"
+            className="group relative flex min-h-[21.75rem] min-w-0 flex-col overflow-hidden rounded-[0.9rem] border border-[#766731]/90 bg-[#050d09] shadow-[0_24px_78px_rgba(0,0,0,0.58),0_0_28px_rgba(215,255,69,0.08),inset_0_0_34px_rgba(124,255,107,0.055)] transition duration-300 hover:-translate-y-1.5 hover:border-[#d7ff45]/76 hover:shadow-[0_34px_96px_rgba(0,0,0,0.68),0_0_54px_rgba(215,255,69,0.18),inset_0_0_42px_rgba(215,255,69,0.075)]"
             key={card.title}
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(215,255,69,0.11),transparent_36%),linear-gradient(180deg,rgba(10,30,20,0.7),rgba(2,6,4,0.98))]" />

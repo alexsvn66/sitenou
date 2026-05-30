@@ -159,7 +159,7 @@ export function RoadmapSection() {
         </div>
 
         <h2
-          className="mt-4 bg-gradient-to-b from-[#fff5b6] via-[#e6f678] to-[#bedb54] bg-clip-text font-serif text-[clamp(3.2rem,7vw,5.75rem)] font-black uppercase leading-[0.88] tracking-[0.12em] text-transparent"
+          className="mt-4 bg-gradient-to-b from-[#fff5b6] via-[#e6f678] to-[#bedb54] bg-clip-text font-serif text-[clamp(2.8rem,14vw,3.2rem)] font-black uppercase leading-[0.88] tracking-[0.12em] text-transparent sm:text-[clamp(3.2rem,7vw,5.75rem)]"
           style={{
             fontFamily: "Georgia, Garamond, 'Times New Roman', serif",
             textShadow:
@@ -182,10 +182,10 @@ export function RoadmapSection() {
         </p>
       </header>
 
-      <div className="relative mt-8 grid auto-rows-fr gap-x-4 gap-y-12 pb-7 sm:mt-10 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 lg:grid-cols-4 lg:gap-x-4">
+      <div className="relative mt-8 grid auto-rows-fr gap-x-4 gap-y-12 pb-7 sm:mt-10 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-14 xl:grid-cols-4 xl:gap-x-4">
         {roadmapCards.map((card, index) => (
           <article
-            className="group relative flex min-h-[27rem] flex-col rounded-[0.95rem] border border-[#786337]/92 bg-[#04100b] shadow-[0_22px_64px_rgba(0,0,0,0.62),0_0_25px_rgba(215,255,69,0.075),inset_0_0_34px_rgba(215,255,69,0.038)] transition duration-300 hover:-translate-y-1 hover:border-[#d7ff45]/72 hover:shadow-[0_30px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(215,255,69,0.15),inset_0_0_36px_rgba(215,255,69,0.055)]"
+            className="group relative flex min-h-[27rem] min-w-0 flex-col rounded-[0.95rem] border border-[#786337]/92 bg-[#04100b] shadow-[0_22px_64px_rgba(0,0,0,0.62),0_0_25px_rgba(215,255,69,0.075),inset_0_0_34px_rgba(215,255,69,0.038)] transition duration-300 hover:-translate-y-1 hover:border-[#d7ff45]/72 hover:shadow-[0_30px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(215,255,69,0.15),inset_0_0_36px_rgba(215,255,69,0.055)]"
             key={card.phase}
           >
             <span className="pointer-events-none absolute left-3 top-3 z-20 h-5 w-5 border-l border-t border-[#e5c56b]/66" />
@@ -193,7 +193,7 @@ export function RoadmapSection() {
             <span className="pointer-events-none absolute bottom-3 left-3 z-20 h-5 w-5 border-b border-l border-[#b99b52]/48" />
             <span className="pointer-events-none absolute bottom-3 right-3 z-20 h-5 w-5 border-b border-r border-[#b99b52]/48" />
 
-            <div className="relative aspect-[192/106] overflow-hidden rounded-t-[0.9rem] border-b border-[#987b3d]/72 bg-[#020604] sm:aspect-auto sm:h-44 lg:aspect-[192/106] lg:h-auto">
+            <div className="relative aspect-[192/106] overflow-hidden rounded-t-[0.9rem] border-b border-[#987b3d]/72 bg-[#020604] sm:aspect-auto sm:h-44 xl:aspect-[192/106] xl:h-auto">
               <RoadmapScene alt={card.imageAlt} crop={card.sceneCrop} />
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_58%,rgba(2,6,4,0.16)_78%,rgba(2,6,4,0.58)_100%)]" />
               <div className="pointer-events-none absolute inset-x-4 bottom-3 h-px bg-gradient-to-r from-transparent via-[#d7ff45]/58 to-transparent shadow-[0_0_10px_rgba(215,255,69,0.44)]" />
@@ -236,7 +236,7 @@ export function RoadmapSection() {
             <StatusMedallion phase={card.phase} status={card.status} />
 
             {index < roadmapCards.length - 1 ? (
-              <div className="pointer-events-none absolute -right-[1.06rem] top-[47%] z-30 hidden h-8 w-8 -translate-y-1/2 items-center justify-center lg:flex">
+              <div className="pointer-events-none absolute -right-[1.06rem] top-[47%] z-30 hidden h-8 w-8 -translate-y-1/2 items-center justify-center xl:flex">
                 <span className="absolute h-px w-8 bg-gradient-to-r from-[#d7ff45]/0 via-[#d7ff45]/78 to-[#b99943]/0 shadow-[0_0_10px_rgba(215,255,69,0.52)]" />
                 <span className="h-3 w-3 rotate-45 border-r border-t border-[#d7ff45] shadow-[0_0_8px_rgba(215,255,69,0.5)]" />
               </div>
