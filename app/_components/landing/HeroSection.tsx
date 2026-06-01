@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const CONTRACT_ADDRESS = "0xGrimmiGoblin000000000000000000000";
+const CONTRACT_ADDRESS = "EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump";
 
 const trustBadges = [
   { icon: "D", label: "DEXTOOLS" },
@@ -366,8 +366,10 @@ export function HeroSection() {
           <div className="absolute inset-x-5 top-[64%] z-10 flex h-12 gap-2 md:hidden">
             <a
               className="relative flex flex-[1.08] items-center justify-center gap-1.5 bg-[#b48a28] px-2 font-serif text-[0.62rem] font-black uppercase tracking-[0.055em] text-[#071005] shadow-[0_0_19px_rgba(215,255,69,0.52),0_7px_18px_rgba(0,0,0,0.54)] transition duration-200 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_0_25px_rgba(215,255,69,0.7),0_9px_20px_rgba(0,0,0,0.56)] active:translate-y-0 active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efff78]"
-              href="#buy"
+              href="https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump"
+              rel="noopener noreferrer"
               style={{ clipPath: fantasyFrameClipPath }}
+              target="_blank"
             >
               <span
                 className="absolute inset-px bg-[linear-gradient(180deg,#efff78_0%,#d7ff45_48%,#acd62d_100%)]"
@@ -418,7 +420,9 @@ export function HeroSection() {
             <a
               aria-label="Buy GRIMMI"
               className="relative flex w-[clamp(9.15rem,19.15vw,22.5rem)] items-center justify-center gap-[clamp(0.35rem,0.72vw,0.85rem)] overflow-hidden rounded-[clamp(0.4rem,0.68vw,0.8rem)] border border-[#e4c04c] bg-[linear-gradient(180deg,#efff78_0%,#d7ff45_48%,#acd62d_100%)] px-[clamp(0.55rem,1.1vw,1.3rem)] font-serif text-[clamp(0.62rem,0.92vw,1.02rem)] font-black uppercase tracking-[0.075em] text-[#071005] shadow-[0_0_18px_rgba(215,255,69,0.52),0_8px_20px_rgba(0,0,0,0.52),inset_0_1px_0_rgba(255,255,208,0.95),inset_0_-3px_0_rgba(67,96,19,0.38)] transition duration-200 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_0_25px_rgba(215,255,69,0.7),0_10px_24px_rgba(0,0,0,0.56)] active:translate-y-0 active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efff78]"
-              href="#buy"
+              href="https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <span className="absolute inset-[clamp(0.14rem,0.22vw,0.26rem)] rounded-[clamp(0.26rem,0.48vw,0.58rem)] border border-[#f7ffac]/65" />
               <span className="absolute inset-x-4 top-[14%] h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />

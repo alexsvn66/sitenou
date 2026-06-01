@@ -98,7 +98,9 @@ export function CommunitySection() {
           <a
             aria-label="Buy GRIMMI"
             className={`${hotspotClass} left-[48.6%] top-[18.2%] h-[20.3%] w-[42.9%]`}
-            href="#buy"
+            href="https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump"
+            rel="noopener noreferrer"
+            target="_blank"
           />
           <a
             aria-label="Follow on X"
@@ -187,7 +189,9 @@ export function CommunitySection() {
             <div className="relative grid gap-3">
               <a
                 className="relative flex h-16 items-center justify-center gap-3 overflow-hidden rounded-lg border border-[#efff78] bg-[#d7ff45] px-4 font-serif text-lg font-black uppercase tracking-[0.075em] text-[#071005] shadow-[0_0_18px_rgba(215,255,69,0.54),0_8px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,208,0.92)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#efff78] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efff78]"
-                href="#buy"
+                href="https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <span className="absolute inset-x-4 top-1 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent" />
                 <ReferenceCrop

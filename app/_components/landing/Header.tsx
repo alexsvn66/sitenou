@@ -5,7 +5,10 @@ const navItems = [
   { label: "Vault", href: "#vault" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Community", href: "#community" },
-  { label: "Buy", href: "#buy" },
+  {
+    label: "Buy",
+    href: "https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump",
+  },
 ];
 
 export function Header() {
@@ -51,6 +54,8 @@ export function Header() {
               className="rounded-full border border-transparent px-5 py-2 text-sm font-black text-[#f1ead0] transition hover:-translate-y-0.5 hover:border-[#d7ff45]/45 hover:bg-[#0a1a11]/90 hover:text-[#d7ff45] hover:shadow-[0_0_24px_rgba(215,255,69,0.18),inset_0_0_14px_rgba(215,255,69,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45]"
               href={item.href}
               key={item.href}
+              rel={item.href.startsWith("https://") ? "noopener noreferrer" : undefined}
+              target={item.href.startsWith("https://") ? "_blank" : undefined}
             >
               {item.label}
             </a>
@@ -59,7 +64,9 @@ export function Header() {
 
         <a
           className="relative inline-flex h-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-[#d7ff45] bg-[#06110d]/82 px-5 text-xs font-black uppercase tracking-wide text-[#efff78] shadow-[0_0_30px_rgba(215,255,69,0.38),inset_0_0_22px_rgba(215,255,69,0.1)] transition hover:-translate-y-1 hover:bg-[#d7ff45] hover:text-[#020604] hover:shadow-[0_0_52px_rgba(215,255,69,0.76),0_16px_42px_rgba(0,0,0,0.48)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45] sm:h-[3.25rem] sm:px-7 sm:text-sm"
-          href="#buy"
+          href="https://pump.fun/coin/EY7ae7YDvgLANwJgUoj9ybyxdMWPcYpZ2exPhfuRpump"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <span className="absolute inset-x-3 top-1 h-px bg-gradient-to-r from-transparent via-[#efff78]/80 to-transparent" />
           Buy $GRIMMI
@@ -75,6 +82,8 @@ export function Header() {
             className="min-w-0 flex-1 rounded-full border border-[#2b432e] bg-[#06110d]/82 px-1.5 py-2 text-center text-[0.66rem] font-bold text-[#cdd7bd] shadow-[inset_0_0_12px_rgba(215,255,69,0.04)] transition hover:border-[#d7ff45]/60 hover:text-[#d7ff45] sm:min-w-fit sm:flex-none sm:px-3 sm:text-xs"
             href={item.href}
             key={item.href}
+            rel={item.href.startsWith("https://") ? "noopener noreferrer" : undefined}
+            target={item.href.startsWith("https://") ? "_blank" : undefined}
           >
             {item.label}
           </a>
