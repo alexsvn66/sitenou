@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const contractAddress = "0xGrimmiGoblin000000000000000000000";
+const CONTRACT_ADDRESS = "0xGrimmiGoblin000000000000000000000";
 
 const trustBadges = [
   { icon: "D", label: "DEXTOOLS" },
@@ -90,6 +90,31 @@ function CopyIcon() {
   );
 }
 
+async function handleCopyContract() {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+      return;
+    }
+
+    const textArea = document.createElement("textarea");
+    textArea.value = CONTRACT_ADDRESS;
+    textArea.style.position = "fixed";
+    textArea.style.left = "-9999px";
+    document.body.appendChild(textArea);
+
+    try {
+      textArea.focus();
+      textArea.select();
+      document.execCommand("copy");
+    } finally {
+      document.body.removeChild(textArea);
+    }
+  } catch (error) {
+    console.error("Failed to copy contract address:", error);
+  }
+}
+
 function ContractBar({ compact = false }: { compact?: boolean }) {
   return (
     <div
@@ -123,15 +148,18 @@ function ContractBar({ compact = false }: { compact?: boolean }) {
             : "text-[clamp(0.42rem,0.66vw,0.78rem)] tracking-[0.04em]"
         }`}
       >
-        {contractAddress}
+        {CONTRACT_ADDRESS}
       </span>
-      <span
-        aria-hidden="true"
+      <button
+        aria-label="Copy contract address"
         className={`relative grid shrink-0 place-items-center rounded-full border border-[#a5bc48]/90 bg-[#0a1a11] text-[#d7ff45] shadow-[0_0_12px_rgba(215,255,69,0.17),inset_0_0_10px_rgba(215,255,69,0.08)] transition duration-200 hover:border-[#efff78] hover:bg-[#112715] hover:shadow-[0_0_18px_rgba(215,255,69,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45] ${compact ? "h-7 w-7 text-sm" : "aspect-square h-[82%] text-[clamp(0.7rem,0.9vw,1rem)]"}`}
+        onClick={handleCopyContract}
+        title="Copy contract address"
+        type="button"
       >
         <span className="absolute inset-[0.16rem] rounded-full border border-[#d3ad4d]/35" />
         <CopyIcon />
-      </span>
+      </button>
     </div>
   );
 }
@@ -202,7 +230,7 @@ export function HeroSection() {
               everyone left behind.
             </p>
             <p>A meme-born vault keeper for the chain-forgotten.</p>
-            <p>Contract address: {contractAddress}</p>
+            <p>Contract address: {CONTRACT_ADDRESS}</p>
             <p>Trusted and liquid: DEXTools, DEXScreener, Rug Check Verified.</p>
           </div>
 
@@ -423,11 +451,12 @@ export function HeroSection() {
               CA:
             </span>
             <span className="min-w-0 flex-1 truncate font-mono text-[clamp(0.42rem,0.66vw,0.78rem)] font-bold tracking-[0.04em] text-[#fff9e2]">
-              {contractAddress}
+              {CONTRACT_ADDRESS}
             </span>
             <button
               aria-label="Copy contract address"
               className="grid aspect-square h-[82%] min-w-fit shrink-0 place-items-center rounded-full border border-[#a5bc48]/90 bg-[#0a1a11] px-[clamp(0.38rem,0.64vw,0.76rem)] text-[clamp(0.36rem,0.52vw,0.6rem)] font-black uppercase tracking-[0.06em] text-[#d7ff45] shadow-[0_0_12px_rgba(215,255,69,0.17),inset_0_0_10px_rgba(215,255,69,0.08)] transition duration-200 hover:border-[#efff78] hover:bg-[#112715] hover:shadow-[0_0_18px_rgba(215,255,69,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45]"
+              onClick={handleCopyContract}
               title="Copy contract address"
               type="button"
             >

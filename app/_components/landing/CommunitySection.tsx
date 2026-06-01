@@ -17,7 +17,7 @@ const communityLinks = [
     crop: { x: 900, y: 328, width: 62, height: 62 },
   },
   {
-    href: "#",
+    href: "https://t.me/GrimmiGoblinn",
     label: "Join Telegram",
     crop: { x: 1247, y: 328, width: 62, height: 62 },
   },
@@ -110,7 +110,9 @@ export function CommunitySection() {
           <a
             aria-label="Join Telegram"
             className={`${hotspotClass} left-[71%] top-[44%] h-[14.7%] w-[21.2%]`}
-            href="#"
+            href="https://t.me/GrimmiGoblinn"
+            rel="noopener noreferrer"
+            target="_blank"
           />
           <a
             aria-label="Trade on Dex"
