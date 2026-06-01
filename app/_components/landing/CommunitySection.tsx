@@ -12,7 +12,7 @@ const buyMarkCrop = { x: 984, y: 169, width: 84, height: 84 };
 
 const communityLinks = [
   {
-    href: "#",
+    href: "https://x.com/GRIMMIGoblin",
     label: "Follow on X",
     crop: { x: 900, y: 328, width: 62, height: 62 },
   },
@@ -103,7 +103,9 @@ export function CommunitySection() {
           <a
             aria-label="Follow on X"
             className={`${hotspotClass} left-[48%] top-[44%] h-[14.7%] w-[21.2%]`}
-            href="#"
+            href="https://x.com/GRIMMIGoblin"
+            rel="noopener noreferrer"
+            target="_blank"
           />
           <a
             aria-label="Join Telegram"
@@ -199,6 +201,12 @@ export function CommunitySection() {
                     className="flex h-14 items-center gap-3 rounded-lg border border-[#806a38]/92 bg-[#06110d]/96 px-3 font-serif text-[0.72rem] font-black uppercase tracking-[0.075em] text-[#fff7df] shadow-[0_6px_16px_rgba(0,0,0,0.46),inset_0_0_14px_rgba(215,255,69,0.035)] transition duration-200 hover:-translate-y-0.5 hover:border-[#d7ff45] hover:text-[#efff78] hover:shadow-[0_0_15px_rgba(215,255,69,0.14),0_7px_18px_rgba(0,0,0,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7ff45]"
                     href={link.href}
                     key={link.label}
+                    rel={
+                      link.href.startsWith("https://")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    target={link.href.startsWith("https://") ? "_blank" : undefined}
                   >
                     <ReferenceCrop
                       className="h-9 w-9 shrink-0 rounded-md bg-transparent"
